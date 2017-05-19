@@ -34,16 +34,16 @@ def commands():
     app.setLabelBg("title","red");
     app.addMessage("mess","""
     ****************************************************************************
-                                SPEECH COMMANDS                                         
-                                                                                                             
+                                         SPEECH COMMANDS                                         
+                                                                                     
              -> "Hi" or "Hello"                                                  
              -> "How Are You"                                                   
              -> "What\'s my Username"                                          
              -> "What Time is it"                                             
              -> "What Day is today"                                           
-             -> "clear" Which clears all what was said before                 
-             -> "open Facebook" or "open Twitter" or "open Developer"         
-             -> "Play Music"/"Stop Music"/"Next Song"/"Previous Song"         
+             -> "clear" Which clears all what was said before             
+             -> "open Facebook" or "open Twitter" or "open Developer" 
+             -> "Play Music"/"Stop Music"/"Next Song"/"Previous Song" 
              -> "Music List" to show Music Tracks available                   
              -> "Repeat" Which repeats the last valid command                 
                                                                               

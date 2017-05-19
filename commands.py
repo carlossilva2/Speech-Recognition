@@ -74,15 +74,19 @@ def main(audio):
         previous.previous = audio;
         if song == 0:
             py.mixer.music.load("Media/Master.mp3");
+            print('Speech: Currently playing {0}.'.format("Master of Puppets"));
             previous.mus = 0;
         elif song == 1:
             py.mixer.music.load("Media/Beat X.mp3");
+            print('Speech: Currently playing {0}.'.format("Beat X"));
             previous.mus = 1;
         elif song == 2:
             py.mixer.music.load("Media/BFG.mp3");
+            print('Speech: Currently playing {0}.'.format("BFG - Division"));
             previous.mus = 2;
         elif song == 3:
             py.mixer.music.load("Media/Voodoo.mp3");
+            print('Speech: Currently playing {0}.'.format("Voodoo People"));
             previous.mus = 3;
         py.mixer.music.play();
     
@@ -92,15 +96,19 @@ def main(audio):
     if 'previous song' in audio:
         if previous.mus == 0:
             py.mixer.music.load("Media/Voodoo.mp3");
+            print('Speech: Currently playing {0}.'.format("Voodoo People"));
             previous.mus = 3;
         elif previous.mus == 1:
             py.mixer.music.load("Media/Master.mp3");
+            print('Speech: Currently playing {0}.'.format("Master of Puppets"));
             previous.mus = 0;
         elif previous.mus == 2:
             py.mixer.music.load("Media/Beat X.mp3");
+            print('Speech: Currently playing {0}.'.format("Beat X"));
             previous.mus = 1;
         elif previous.mus == 3:
             py.mixer.music.load("Media/BFG.mp3");
+            print('Speech: Currently playing {0}.'.format("BFG - Division"));
             previous.mus = 2;
         py.mixer.music.play();
     
@@ -118,6 +126,36 @@ def main(audio):
             py.mixer.music.load("Media/Master.mp3");
             previous.mus = 0;
         py.mixer.music.play();
+
+    if 'music list' in audio:
+        if 'detail first' in audio:
+            print('Song Name: Beat X');
+            print('Artist: dB');
+            print('Album: [Beat]erapia');
+            print('Year: 2012'),
+            print('Style: ');
+            previous.previous = audio;
+        if 'detail second' in audio:
+            print('Song Name: Master of Puppets');
+            print('Artist: Metallica');
+            print('Album: Master of Puppets');
+            print('Year: 1986'),
+            print('Style: Thrash Metal');
+            previous.previous = audio;
+        if 'detail third' in audio:
+            print('Song Name: Voodoo People');
+            print('Artist: The Prodigy');
+            print('Album: Music For The Jilted Generation');
+            print('Year: 1994'),
+            print('Style: Electronic');
+            previous.previous = audio;
+        if 'detail fourth' in audio:
+            print('Song Name: BFG - Division');
+            print('Artist: Mick Gordon');
+            print('Album: DOOM');
+            print('Year: 2016'),
+            print('Style: Doom Metal');
+            previous.previous = audio;
 
     if 'repeat' in audio:
         mood = randint(0,2);
