@@ -1,3 +1,5 @@
+#version 2.1
+
 from commands import main;
 import speech_recognition as sr;
 from getpass import getuser;
